@@ -1,0 +1,97 @@
+/* General App Reset */
+body {
+  margin: 0;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Cyber Navigation Links */
+.cyber-nav-link {
+  padding: 10px 18px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  border: 1px solid transparent;
+}
+.cyber-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: currentColor;
+  box-shadow:
+    0 0 12px currentColor,
+    inset 0 0 8px currentColor;
+  text-shadow: 0 0 8px currentColor;
+}
+
+/* Page Headers */
+.cyber-header {
+  font-size: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid currentColor;
+  text-shadow: 0 0 15px currentColor;
+  box-shadow: 0 15px 15px -15px currentColor;
+  display: inline-block;
+}
+
+/* Card Hover Animations */
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.news-card {
+  animation: slideUpFade 0.6s ease forwards;
+  opacity: 0;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.5),
+    0 0 15px var(--theme-color);
+  border-color: var(--theme-color) !important;
+}
+
+.news-card img {
+  transition: transform 0.5s ease;
+}
+.news-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Fixed Action Buttons */
+.cyber-button {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid var(--theme-color);
+  background-color: transparent;
+  color: var(--theme-color);
+  transition: all 0.3s ease-in-out;
+  margin-top: auto;
+}
+
+.cyber-button:hover {
+  background-color: var(--theme-color);
+  color: #000000 !important;
+  box-shadow: 0 0 20px var(--theme-color);
+}
