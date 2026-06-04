@@ -10,7 +10,7 @@ export default function DarkWeb() {
       try {
         const apiKey = import.meta.env.VITE_NEWS_API_KEY;
         const response = await fetch(
-          `https://newsapi.org/v2/everything?q="dark web"&sortBy=publishedAt&language=en&apiKey=${apiKey}`,
+          `https://gnews.io/api/v4/search?q="dark web"&sortby=publishedAt&lang=en&apikey=${apiKey}`,
         );
         const data = await response.json();
         if (data.articles) {
