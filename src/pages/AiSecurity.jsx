@@ -10,7 +10,7 @@ export default function AiSecurity() {
       try {
         const apiKey = import.meta.env.VITE_NEWS_API_KEY;
         const response = await fetch(
-          `https://gnews.io/api/v4/search?q="AI security" OR "deepfake"&sortby=publishedAt&lang=en&apikey=${apiKey}`,
+          `https://corsproxy.io/?https://gnews.io/api/v4/search?q="AI security" OR "deepfake"&sortby=publishedAt&lang=en&apikey=${apiKey}`,
         );
         const data = await response.json();
         if (data.articles) {
