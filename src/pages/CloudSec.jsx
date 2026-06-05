@@ -10,7 +10,7 @@ export default function CloudSec() {
       try {
         const apiKey = import.meta.env.VITE_NEWS_API_KEY;
         const response = await fetch(
-          `https://corsproxy.io/?https://gnews.io/api/v4/search?q="cloud security"&sortby=publishedAt&lang=en&apikey=${apiKey}`,
+          `/api/news?q="cloud security"&sortby=publishedAt&lang=en&apikey=${apiKey}`,
         );
         const data = await response.json();
         if (data.articles) {
