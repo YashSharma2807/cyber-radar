@@ -22,8 +22,8 @@ export default function DarkWeb() {
               date: new Date(article.publishedAt).toLocaleDateString(),
               url: article.url,
               image:
-                article.urlToImage ||
-                "https://via.placeholder.com/600x300/0f172a/eab308?text=[+NO+VISUAL+FEED+]",
+                article.image ||
+                "https://via.placeholder.com/600x300/0f172a/f59e0b?text=[+NO+VISUAL+FEED+]",
             })),
           );
         } else setError("No data received.");
@@ -41,14 +41,14 @@ export default function DarkWeb() {
       style={{
         padding: "40px",
         fontFamily: "monospace",
-        color: "#eab308",
+        color: "#f59e0b",
         backgroundColor: "#000000",
         minHeight: "100vh",
       }}
     >
       <h1 className="cyber-header">DARK WEB</h1>
       {isLoading ? (
-        <p style={{ color: "#eab308" }}>Loading...</p>
+        <p style={{ color: "#f59e0b" }}>Loading...</p>
       ) : error ? (
         <p style={{ color: "#ef4444" }}>[ ERROR ] {error}</p>
       ) : (
@@ -64,7 +64,7 @@ export default function DarkWeb() {
               key={news.id}
               className="news-card"
               style={{
-                "--theme-color": "#eab308",
+                "--theme-color": "#f59e0b",
                 animationDelay: `${index * 0.1}s`,
                 display: "flex",
                 flexDirection: "column",

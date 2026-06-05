@@ -22,7 +22,7 @@ export default function AiSecurity() {
               date: new Date(article.publishedAt).toLocaleDateString(),
               url: article.url,
               image:
-                article.urlToImage ||
+                article.image ||
                 "https://via.placeholder.com/600x300/0f172a/a855f7?text=[+NO+VISUAL+FEED+]",
             })),
           );

@@ -22,8 +22,8 @@ export default function CloudSec() {
               date: new Date(article.publishedAt).toLocaleDateString(),
               url: article.url,
               image:
-                article.urlToImage ||
-                "https://via.placeholder.com/600x300/0f172a/38bdf8?text=[+NO+VISUAL+FEED+]",
+                article.image ||
+                "https://via.placeholder.com/600x300/0f172a/0ea5e9?text=[+NO+VISUAL+FEED+]",
             })),
           );
         } else setError("No data received.");
@@ -41,14 +41,14 @@ export default function CloudSec() {
       style={{
         padding: "40px",
         fontFamily: "monospace",
-        color: "#38bdf8",
+        color: "#0ea5e9",
         backgroundColor: "#000000",
         minHeight: "100vh",
       }}
     >
       <h1 className="cyber-header">CLOUD SECURITY</h1>
       {isLoading ? (
-        <p style={{ color: "#38bdf8" }}>Loading...</p>
+        <p style={{ color: "#0ea5e9" }}>Loading...</p>
       ) : error ? (
         <p style={{ color: "#ef4444" }}>[ ERROR ] {error}</p>
       ) : (
@@ -64,7 +64,7 @@ export default function CloudSec() {
               key={news.id}
               className="news-card"
               style={{
-                "--theme-color": "#38bdf8",
+                "--theme-color": "#0ea5e9",
                 animationDelay: `${index * 0.1}s`,
                 display: "flex",
                 flexDirection: "column",
